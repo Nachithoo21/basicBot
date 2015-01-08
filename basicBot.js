@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Nachithoo/basicBot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/Nachithoo21/basicBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -174,7 +174,7 @@
         return m;
     };
 
-    var botCreator = "Matthew aka. Yemasthui, customized by Nachithoo";
+    var botCreator = "Matthew aka. Yemasthui, customized by Nachithoo21";
     var botCreatorIDs = [];
 
     var basicBot = {
@@ -182,9 +182,9 @@
         status: false,
         name: "IrkinBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Nachithoo/basicBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/Nachithoo21/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Nachithoo/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/Nachithoo21/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
@@ -192,7 +192,7 @@
         settings: {
             botName: "IrkinBot",
             language: "english",
-            chatLink: "https://rawgit.com/Nachithoo/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/Nachithoo21/basicBot/master/lang/en.json",
             maximumAfk: 120,
             afkRemoval: false,
             maximumDc: 24,
@@ -238,8 +238,8 @@
             songstats: false,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Nachithoo/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/Nachithoo/basicBot-customization/master/blacklists/ExampleOPlist.json"
+                NSFW: "https://rawgit.com/Nachithoo21/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+                OP: "https://rawgit.com/Nachithoo21/basicBot-customization/master/blacklists/ExampleOPlist.json"
             }
         },
         room: {
