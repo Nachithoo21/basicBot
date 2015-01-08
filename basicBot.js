@@ -54,7 +54,7 @@
     var loadChat = function (cb) {
         if (!cb) cb = function () {
         };
-        $.get("https://rawgit.com/Yemasthui/basicBot/master/lang/langIndex.json", function (json) {
+        $.get("https://rawgit.com/Nachithoo/basicBot/master/lang/langIndex.json", function (json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== "undefined") {
                 langIndex = json;
@@ -174,28 +174,28 @@
         return m;
     };
 
-    var botCreator = "Matthew aka. Yemasthui";
+    var botCreator = "Matthew aka. Yemasthui, customized by Nachithoo";
     var botCreatorIDs = [];
 
     var basicBot = {
         version: "2.1.4",
         status: false,
-        name: "basicBot",
+        name: "IrkinBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+        scriptLink: "https://rawgit.com/Nachithoo/basicBot/master/basicBot.js",
         cmdLink: "http://git.io/245Ppg",
-        chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+        chatLink: "https://rawgit.com/Nachithoo/basicBot/master/lang/en.json",
         chat: null,
         loadChat: loadChat,
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: "basicBot",
+            botName: "IrkinBot",
             language: "english",
-            chatLink: "https://rawgit.com/Yemasthui/basicBot/master/lang/en.json",
+            chatLink: "https://rawgit.com/Nachithoo/basicBot/master/lang/en.json",
             maximumAfk: 120,
-            afkRemoval: true,
-            maximumDc: 60,
+            afkRemoval: false,
+            maximumDc: 24,
             bouncerPlus: true,
             lockdownEnabled: false,
             lockGuard: false,
@@ -205,7 +205,7 @@
             voteSkip: false,
             voteSkipLimit: 10,
             timeGuard: true,
-            maximumSongLength: 10,
+            maximumSongLength: 7,
             autodisable: true,
             commandCooldown: 30,
             usercommandsEnabled: true,
@@ -219,7 +219,7 @@
                 ["nsfw", "The song you contained was NSFW (image or sound). "],
                 ["unavailable", "The song you played was not available for some users. "]
             ],
-            afkpositionCheck: 15,
+            afkpositionCheck: 50,
             afkRankCheck: "ambassador",
             motdEnabled: false,
             motdInterval: 5,
@@ -230,16 +230,16 @@
             opLink: null,
             rulesLink: null,
             themeLink: null,
-            fbLink: null,
+            fbLink: "facebook.com/groups/losgumer",
             youtubeLink: null,
-            website: null,
+            website: "los-gumer.com",
             intervalMessages: [],
             messageInterval: 5,
-            songstats: true,
+            songstats: false,
             commandLiteral: "!",
             blacklists: {
-                NSFW: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
-                OP: "https://rawgit.com/Yemasthui/basicBot-customization/master/blacklists/ExampleOPlist.json"
+                NSFW: "https://rawgit.com/Nachithoo/basicBot-customization/master/blacklists/ExampleNSFWlist.json",
+                OP: "https://rawgit.com/Nachithoo/basicBot-customization/master/blacklists/ExampleOPlist.json"
             }
         },
         room: {
@@ -1085,13 +1085,10 @@
                 basicBot.room.roomstats.chatmessages++;
             },
             spam: [
-                'hueh', 'hu3', 'brbr', 'heu', 'brbr', 'kkkk', 'spoder', 'mafia', 'zuera', 'zueira',
-                'zueria', 'aehoo', 'aheu', 'alguem', 'algum', 'brazil', 'zoeira', 'fuckadmins', 'affff', 'vaisefoder', 'huenaarea',
-                'hitler', 'ashua', 'ahsu', 'ashau', 'lulz', 'huehue', 'hue', 'huehuehue', 'merda', 'pqp', 'puta', 'mulher', 'pula', 'retarda', 'caralho', 'filha', 'ppk',
-                'gringo', 'fuder', 'foder', 'hua', 'ahue', 'modafuka', 'modafoka', 'mudafuka', 'mudafoka', 'ooooooooooooooo', 'foda'
+                'zueira',
             ],
             curses: [
-                'nigger', 'faggot', 'nigga', 'niqqa', 'motherfucker', 'modafocka'
+                '232335532234',
             ]
         },
         connectAPI: function () {
@@ -1341,7 +1338,7 @@
 
             afkremovalCommand: {
                 command: 'afkremoval',
-                rank: 'mod',
+                rank: 'host',
                 type: 'exact',
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
